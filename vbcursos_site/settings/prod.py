@@ -4,7 +4,7 @@ import dj_database_url
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['vbcursos-site.onrender.com','3.134.238.10','3.129.111.220','127.0.0.1']
+ALLOWED_HOSTS = ['*']
 
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
@@ -21,7 +21,7 @@ CLOUDINARY_STORAGE = {
 }
 '''
 
-CSRF_TRUSTED_ORIGINS = ['https://vbcursos-site.onrender.com','http://127.0.0.1']
+CSRF_TRUSTED_ORIGINS = ['https://vbcursos-deploy.onrender.com']
 
 # HTTPS settings
 
