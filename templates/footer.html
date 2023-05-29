@@ -1,0 +1,32 @@
+{% load static %}
+
+<footer>
+    <div id="footer-left">
+        <div id="footer-cursos">
+            <h5>Cursos</h5>
+            {% for curso in cursos %}
+            <a href="{% url 'curso' slug=curso.slug %}">{{ curso.title }}</a>
+            {% endfor %}
+        </div>
+        <div id="footer-contato">
+            <h5>Contato</h5>
+            <p>+55 041 9 9167 5561</p>
+            <p>contato@vianabarmanncursos.com.br</p>
+            <p>Alameda Augusto Stellfeld, 442 - Centro | Curitiba - PR, 80020-300</p>
+        </div>
+    </div>
+
+    <div id="footer-social">
+        <b style="text-align: center;">Siga-nos</b>
+        <div id="footer-social-icons">
+            <img src="{% static 'images/facebook.png' %}" width="50px">
+            <img src="{% static 'images/instagram.png' %}" width="50px">
+            <img src="{% static 'images/youtube.png' %}" width="50px">
+        </div>
+
+    </div>
+
+
+
+
+</footer>

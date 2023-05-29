@@ -1,0 +1,27 @@
+{% load static %}
+
+           <header>
+             <nav>
+                    <div id="logo-container">
+                        <a id="nav-brand" href="{% url 'home' %}">
+                            <img src="{% static 'images/logo-vbcursos.svg' %}" width="100px" height="auto" alt="logo">
+                        </a>
+                        <p>VIANA BARMANN CURSOS</p>
+                    </div>
+
+                    <div class="mobileMenu">
+                        <div class="line1"></div>
+                        <div class="line2"></div>
+                        <div class="line3"></div>
+                    </div>
+
+                    <ul class="navList">
+                        <li><a class="navLink active" href="#metodo-section">Metodologia</a></li>
+                        <li><a class="navLink" href="#docentes-section">Especialista</a></li>
+                        <li><a class="navLink" href="#depoimentos-section">Depoimentos</a></li>
+                        <li><a class="navLink" href="#cursos-section">Cursos</a></li>
+                    </ul>
+             </nav>
+           </header>
+
+           <script src="{% static 'js/mobile_navbar.js' %}"></script>

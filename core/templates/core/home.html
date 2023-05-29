@@ -1,0 +1,189 @@
+{% extends 'main.html' %}
+{% load static %}
+
+{% block content %}
+
+<section id="banner-section" style="background-image: url('{% static 'images/camara-banner.png' %}');">
+    <div id="banner-content">
+        <h1>Seja a diferença,<br> faça um curso especializado <br>em Direito Público e alavanque <br>sua carreira na política!</h1>
+        <h2>Aprenda com docentes mestres e doutores de alto nível<br>em uma das instituições mais conceituadas em  <br>capacitação e treinamento de agentes públicos.</h3>
+        <a class="banner-btn" href="#cursos-section">Ver cursos</a>
+    </div>
+</section>
+
+
+<section id="diferencial-section">
+    <img src="{% static 'images/vb-logo-line.svg' %}" alt="VB Cursos contorno" id="outline-logo">
+    <h3>POR QUE <br class="br-lg">ESCOLHER <br class="br-lg"><br class="br-sm">NOSSOS <br class="br-lg">CURSOS?</h3>
+    <div id="diferencial-container">
+
+        <div class="diferencial-item">
+            <div class="diferencial-header">
+                <img src="{% static 'images/doutores.svg' %}" height="100px" alt="icone de professores de alto nível">
+                <h4>Docentes Mestres e Doutores</h4>
+            </div>
+            <h5>Aprenda com o auxílio de um dos melhores quadros docentes do país, formado por mestres e doutores com anos de experiência.</h5>
+        </div>
+
+        <div class="diferencial-item">
+            <div class="diferencial-header">
+                <img src="{% static 'images/certificado.svg' %}" height="100px" alt="icone de certificado">
+                <h4>Obtenha seu certificado</h4>
+            </div>
+            <h5>Além de todo conhecimento, você também vai receber um certificado.</h5>
+        </div>
+
+        <div class="diferencial-item">
+            <div class="diferencial-header">
+                <img src="{% static 'images/mentoria.svg' %}" height="100px" alt="icone de mentoria">
+                <h4>Mentoria e espaço para tirar dúvidas</h4>
+            </div>
+            <h5>Ajudamos você a guiar sua carreira como agente público.</h5>
+        </div>
+
+        <div class="diferencial-item">
+            <div class="diferencial-header">
+                <img src="{% static 'images/atividades.svg' %}" height="100px"  alt="icone de atividades">
+                <h4>Materiais e atividades</h4>
+            </div>
+            <h5>A melhor forma de se aprender algo é buscando boas referências e praticando bastante! Por isso, disponibilizamos diversos materiais de apoio, referências de conteúdo de estudo e atividades práticas para todos os cursos.</h5>
+        </div>
+    </div>
+</section>
+
+<section id="estude-section">
+
+    <div id="estude-online">
+        <img src="{% static 'images/aulas-online.svg' %}" height="100px"  alt="icone de atividades">
+        <h4>Nossas aulas são 100% online e gravadas com acesso ilimitado para você assistir no seu próprio tempo</h4>
+        <p>Também fazemos 1 aula online ao vivo a cada 2 semanas para esclarecer dúvidas e agregar mais conhecimento acerca do assunto do curso.</p>
+    </div>
+    <div id="estude-referencia" style="background-image: url('{% static 'images/referencia.png' %}');">
+        <h3>ESTUDE <br>COM QUEM É <br><span class="underline">REFERÊNCIA</span></h3>
+        <p>Reconhecidos nacionalmente por sua excelente reputação acadêmica, a Viana Barmann Cursos é uma das instituições mais conceituadas em capacitação e treinamentos de agentes públicos, assessores, vereadores, prefeitos e carreiras públicas.</p>
+    </div>
+
+</section>
+
+
+<section id="testimonial-section">
+    <h3>DEPOIMENTOS DE NOSSOS ALUNOS</h3>
+    <div id="testimonial-container">
+        <a href="#!" class="control-slider btn-left">
+            <svg width="25px" class="chevron testimonialLeft" id="Camada_2" data-name="Camada 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 232.1 139.36">
+                <g id="Camada_1-2" data-name="Camada 1">
+                    <path fill="currentColor" d="m115.98,139.36L0,23.13,17.7,5.48c5.86-5.85,15.36-5.84,21.21.02l76.94,77.1L193.1,4.45c5.82-5.89,15.32-5.95,21.21-.12l17.78,17.58-116.11,117.45Z"/>
+                </g>
+            </svg> 
+        </a>
+        <div class="testimonials">   
+            <div class="slider-container">
+                <div class="slider" style="width: calc( {{ qntd_feedbacks }} * 100% );">
+
+                    {% for feedback in feedbacks %}
+                        <div class="slide-box">
+                            <p class="comment">
+                                {{ feedback.feedback }}
+                            
+                            </p>
+                            <div>
+                                <img src="{{ feedback.foto.url }}" />
+                                <h3 class="name">{{ feedback.nome }}</h3>
+                                <h4 class="job">{{ feedback.profissao }}</h4>
+                            </div>
+                        </div>
+                    {% endfor %}
+                
+                </div>
+            </div>
+        </div>
+        <a href="#!" class="control-slider btn-right">
+            <svg width="25px" class="chevron testimonialRight" id="Camada_2" data-name="Camada 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 232.1 139.36">
+                <g id="Camada_1-2" data-name="Camada 1">
+                    <path fill="currentColor" d="m115.98,139.36L0,23.13,17.7,5.48c5.86-5.85,15.36-5.84,21.21.02l76.94,77.1L193.1,4.45c5.82-5.89,15.32-5.95,21.21-.12l17.78,17.58-116.11,117.45Z"/>
+                </g>
+            </svg> 
+        </a>
+    </div>   
+</section>
+
+
+<section id="sobre-section">
+
+        <div id="sobre-img-container">
+            <img src="{% static 'images/especialista.png' %}">
+        </div>
+        <div id="sobre-content">
+            <div id="sobre-title">
+                <h4>Sob o comando da Professora<br> Mestra Ana Paula Viana Barmann</h4>
+                <hr>
+            </div>
+            <ul>
+                <li>Advogada formada pela Pontifícia Universidade Católica do Paraná em 2000</li>
+                <li>Doutoranda e Mestre em Democracia e Direitos Fundamentais - (Eleitoral) pelo UNIBRASIL</li>
+                <li>Membro da ABRADEP - Associação da Academia Brasileira de Direito Eleitoral e Político</li>
+                <li>Professora de Pós Graduação e Graduação de Direito Eleitoral, Direito Administrativo e Constitucional</li>
+                <li>Advogada nas áreas de direito eleitoral, administrativo e cível, palestrante em diversos eventos de direito eleitoral</li>
+            </ul>   
+        </div>
+</section>
+
+<section id="cursos-section">
+    <h3>CONHEÇA NOSSOS CURSOS</h3>
+    <p>Aprenda com quem é referência no assunto</p>
+        
+        <div id="cursos-wrapper">
+     
+          {% for curso in cursos %}
+
+          <div class="curso-item">
+            <div>
+            <h2> {{ curso.title }} </h2>
+            <h5 style="margin-bottom: 2rem;">{{ curso.description }}</h5>
+            </div>
+            <a class="main-btn" href="{% url 'curso' slug=curso.slug %}">Saiba mais!</a>
+
+          </div>
+
+          {% endfor %}
+
+       
+        </div>
+
+</section>
+
+<section id="faq-section">
+    <h3>PERGUNTAS FREQUENTES</h3>
+
+    <div class="container">
+        <ul class="accordionMenu">
+            {% for pergunta in faq %}
+                <li class="item">
+                    <div class="dropdown">
+                        <p>{{ pergunta.pergunta }}</p>
+                        <svg width="25px" class="chevron" id="Camada_2" data-name="Camada 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 232.1 139.36">
+                            <g id="Camada_1-2" data-name="Camada 1">
+                                <path fill="currentColor" d="m115.98,139.36L0,23.13,17.7,5.48c5.86-5.85,15.36-5.84,21.21.02l76.94,77.1L193.1,4.45c5.82-5.89,15.32-5.95,21.21-.12l17.78,17.58-116.11,117.45Z"/>
+                            </g>
+                        </svg>                    
+                    </div>
+                    <div class="submenuItems">
+                        {{ pergunta.resposta }}
+                    </div>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+
+
+</section>
+
+<section id="contato-section">
+    <img src="{% static 'images/chat.svg' %}" alt="icone de conversa">
+    <div id="contato-container">
+        <h3>Ainda tem <br>dúvidas?</h3>
+        <a href="https://api.whatsapp.com/send?phone=5541991675561&" class="contato-btn">Entre em contato<br>via WhatsApp</a>
+    </div>
+</section>
+
+{% endblock content %}

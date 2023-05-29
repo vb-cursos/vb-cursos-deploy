@@ -1,0 +1,195 @@
+{% extends 'main.html' %}
+{% load static %}
+
+{% block content %}
+    <section id="curso-banner-section">
+        <iframe src="https://www.youtube.com/embed/{{ video_id }}" frameborder="0" allowfullscreen></iframe>
+
+        <div id="curso-banner-content">
+                <h1>{{ curso.h1 }}</h1>
+                <h2>{{ curso.h2 }}</h3>
+                <a class="banner-btn" href="#cursos-section">{{ curso.cta }}</a>
+        </div>
+
+    </section>
+
+    <section id="modulos-curso-section">
+        <div id="modulos-content">
+         
+            <div id="duracao-curso">
+                <h4>O QUE VOCÊ<br class="br-lg"> VAI APRENDER <br class="br-lg">NESTE CURSO</h4>
+                <p>Este {{ curso.title }} possui {{ curso.duracao }} horas, divididas em {{ curso.aulas }} aulas <b>cheias de conteúdo aprofundado e de alto valor sobre o assunto.</b></p>
+            </div>
+
+                <ul class="accordionMenu modulos">
+                {% for modulo in modulos %}
+                    <li class="item modulos">
+                        <div class="dropdown modulos">
+                            <h2>{{ modulo.nome }}</h2>
+                            <svg width="25px" class="chevron" id="Camada_2" data-name="Camada 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 232.1 139.36">
+                                <g id="Camada_1-2" data-name="Camada 1">
+                                    <path fill="currentColor" d="m115.98,139.36L0,23.13,17.7,5.48c5.86-5.85,15.36-5.84,21.21.02l76.94,77.1L193.1,4.45c5.82-5.89,15.32-5.95,21.21-.12l17.78,17.58-116.11,117.45Z"/>
+                                </g>
+                            </svg>                    
+                        </div>
+                        <div class="submenuItems modulos">
+                            <h3>{{ modulo.descricao }}</h3>
+                        </div>
+                    </li>
+                {% endfor %}
+                </ul>
+        </div>
+    </section>
+
+    <section id="especialista-section">
+        <img src="{% static 'images/ana-especialista.jpg' %}">
+        <div id="especialista-container">
+            <h3>COM QUEM VOCÊ VAI APRENDER</h3>
+            <h4>Professora Mestra Ana Paula Viana Barmann</h4>
+            <ul>
+                <li>Advogada formada pela Pontifícia Universidade Católica do Paraná em 2000</li>
+                <li>Doutoranda e Mestre em Democracia e Direitos Fundamentais - (Eleitoral) pelo UNIBRASIL</li>
+                <li>Membro da ABRADEP - Associação da Academia Brasileira de Direito Eleitoral e Político</li>
+                <li>Professora de Pós Graduação e Graduação de Direito Eleitoral, Direito Administrativo e Constitucional</li>
+                <li>Advogada nas áreas de direito eleitoral, administrativo e cível, palestrante em diversos eventos de direito eleitoral</li>
+            </ul>   
+            <h5>{{ curso.autoridade }}</h5>
+        </div>
+    </section>
+
+    <section id="bonus-section">
+        <div id="bonus-container">
+            <div class="bonus-item">
+                <img src="{% static 'images/pagamento-seguro.svg' %}">
+                <div>
+                    <h5>Segurança no pagamento</h5>
+                    <h6>Disponibiliams um ambiente 100% seguro para pagamentos, seus dados estão protegidos.</h6>
+                </div>
+            </div>
+            <div class="bonus-item">
+                <img src="{% static 'images/aulas-online.svg' %}">
+                <div>
+                    <h5>Acesso imediato e vitalício</h5>
+                    <h6>Os dados de acesso (login e senha) serão enviados para o seu e-mail logo após a confirmação do pedido.</h6>
+                </div>
+            </div>
+            <div class="bonus-item">
+                <img src="{% static 'images/conversa.svg' %}">
+                <div>
+                    <h5>Tira dúvidas online via Zoom e grupo no WhatsApp</h5>
+                    <h6>Você podera tirar suas dúvidas diretamente conosco no grupo de
+                        WhatsApp com alunos e na aula inaugural no Zoom.</h6>
+                </div>
+            </div>
+            <div class="bonus-item">
+                <img src="{% static 'images/garantia.svg' %}">
+                <div>
+                    <h5>Garantia de satisfação<br> de 7 dias</h5>
+                    <h6>Voce podera cancelar sua inscrição e pedir a
+                        devolução de todo seu dinheiro por qualquer motivo.</h6>
+                </div>
+            </div>
+        </div>
+        <div id="bonus-cta-container">
+            <p><b>Clique no botão abaixo</b> e dê o primeiro passo <br> para aprofundar seus conhecimentos com nosso<br> {{ curso.title }}</p>
+            <a class="banner-btn" href="#cursos-section">{{ curso.cta }}</a>
+            <img src="">
+        </div>
+    </section>
+
+
+
+
+    <section id="investimento-curso-section">
+        <h4>VALOR DO SEU INVESTIMENTO</h4>
+        <div id="investimento-curso-content">
+            <div id="investimento-box-valor">
+                <p>De <span style="text-decoration: line-through;">R$1.297,00</span> por apenas R${{ curso.price }} à vista ou 12x de</p>
+                <p id="parcela">R${{ parcela }}</p>
+                <a class="banner-btn" href="#cursos-section">Eu quero!</a>
+            </div>
+            <div id="investimento-box-beneficios">
+                        
+                {{ curso.beneficios }}
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonial-section">
+        <h3>DEPOIMENTOS DE NOSSOS ALUNOS</h3>
+        <div id="testimonial-container">
+            <a href="#!" class="control-slider btn-left">
+                <svg width="25px" class="chevron testimonialLeft" id="Camada_2" data-name="Camada 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 232.1 139.36">
+                    <g id="Camada_1-2" data-name="Camada 1">
+                        <path fill="currentColor" d="m115.98,139.36L0,23.13,17.7,5.48c5.86-5.85,15.36-5.84,21.21.02l76.94,77.1L193.1,4.45c5.82-5.89,15.32-5.95,21.21-.12l17.78,17.58-116.11,117.45Z"/>
+                    </g>
+                </svg> 
+            </a>
+            <div class="testimonials">   
+                <div class="slider-container">
+                    <div class="slider" style="width: calc( {{ qntd_feedbacks }} * 100% );">
+    
+                        {% for feedback in feedbacks %}
+                            <div class="slide-box">
+                                <p class="comment">
+                                    {{ feedback.feedback }}
+                                
+                                </p>
+                                <div>
+                                    <img src="{{ feedback.foto.url }}" />
+                                    <h3 class="name">{{ feedback.nome }}</h3>
+                                    <h4 class="job">{{ feedback.profissao }}</h4>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    
+                    </div>
+                </div>
+            </div>
+            <a href="#!" class="control-slider btn-right">
+                <svg width="25px" class="chevron testimonialRight" id="Camada_2" data-name="Camada 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 232.1 139.36">
+                    <g id="Camada_1-2" data-name="Camada 1">
+                        <path fill="currentColor" d="m115.98,139.36L0,23.13,17.7,5.48c5.86-5.85,15.36-5.84,21.21.02l76.94,77.1L193.1,4.45c5.82-5.89,15.32-5.95,21.21-.12l17.78,17.58-116.11,117.45Z"/>
+                    </g>
+                </svg> 
+            </a>
+        </div>   
+    </section>
+    
+    
+
+    <section id="faq-section">
+        <h3>PERGUNTAS FREQUENTES</h3>
+        <div class="container">
+            <ul class="accordionMenu">
+                {% for pergunta in faq %}
+                    <li class="item">
+                        <div class="dropdown">
+                            <p>{{ pergunta.pergunta }}</p>
+                            <svg width="25px" class="chevron" id="Camada_2" data-name="Camada 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 232.1 139.36">
+                                <g id="Camada_1-2" data-name="Camada 1">
+                                    <path fill="currentColor" d="m115.98,139.36L0,23.13,17.7,5.48c5.86-5.85,15.36-5.84,21.21.02l76.94,77.1L193.1,4.45c5.82-5.89,15.32-5.95,21.21-.12l17.78,17.58-116.11,117.45Z"/>
+                                </g>
+                            </svg>                    
+                        </div>
+                        <div class="submenuItems">
+                            {{ pergunta.resposta }}
+                        </div>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </section>
+
+
+    <section id="contato-section">
+        <img src="{% static 'images/chat.svg' %}" alt="icone de conversa">
+        <div id="contato-container">
+            <h3>Ainda tem <br>dúvidas?</h3>
+            <a href="https://api.whatsapp.com/send?phone=5541991675561&" class="contato-btn">Entre em contato<br>via WhatsApp</a>
+        </div>
+    </section>
+
+   
+
+{% endblock %}
