@@ -310,7 +310,17 @@
         line-height: 1;
         width: 60vw;
     }
-    
+
+    #banner-content h1 {
+        width: 100%;
+        font-size: 1.2rem;
+    }
+
+    #banner-content h2 {
+        width: 100%;
+        font-size: 0.8rem;
+
+    }
 
     /* quebra de linha */
     #diferencial-section .br-sm {  

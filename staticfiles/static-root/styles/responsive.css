@@ -1,11 +1,515 @@
-@media screen and (min-width: 992px) {
+@media screen and (max-width: 1200px) {
+
+    #diferencial-section {
+        display: block;
+    }
+
+
+    #diferencial-section h3 {
+        font-size: 2rem;
+        text-align: center;
+        padding-bottom: 2rem;
+    }
+
+    /* quebra de linha */
+    #diferencial-section .br-lg {
+        display: none;
+    }
+
+    #diferencial-container {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        gap: 1rem;
+    }
+
+    #sobre-img-container {
+        margin-bottom: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #sobre-section h4 {
+        font-size: 1.5rem;
+}
+
+
+    #cursos-section {
+        padding: 4rem 2rem;
+    }
 
 }
 
-@media screen and (max-width: 991.98px) {
+@media screen and (max-width: 991.99px) {
+
+    #wrapper {
+        overflow-x: hidden;
+        position: relative
+    }
+
+    nav {
+        background-color: var(--space-cadet);
+        padding: 0.5rem 2rem;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: center;
+        height: 10vh;
+    }
+
+    .navList {
+        position: absolute;
+        top: 10vh;
+        right: 0;
+        width: 50%;
+        height: 90vw;
+        background: var(--primary-red);
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        transform: translateX(100%);
+    }
+    .navList li {
+        margin-left: 0;
+        opacity: 0;
+        width: auto;
+    }
+
+    .mobileMenu {
+        display: block;
+    }
+    
+
+    #banner-section {
+        padding: 4rem 2rem 8rem 2rem;
+        margin: 0;
+        color: var(--background-white);
+        height: auto;
+        background-size: cover;
+    }
+
+        #banner-content {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-flow: column nowrap; 
+            justify-content: center;
+        }
+
+        #banner-content h1 {
+            width: 100%;
+            font-size: 2rem;
+        }
+
+        #banner-content h2 {
+            width: 100%;
+            font-size: 1rem;
+
+        }
+
+        #diferencial-section {
+            padding: 3rem 2rem;
+        }
+        
+            #diferencial-section h3 {
+                font-size: 2rem;
+                text-align: center;
+            }
+
+            /* quebra de linha */
+            #diferencial-section .br-lg {
+                display: none;
+            }
+
+            #diferencial-container {
+                width: 100%;
+                gap: 1rem;
+            }
+        
+            .diferencial-item {
+                border-radius: 0px 32px 32px 32px; 
+                padding: 2rem;
+                background-color: var(--background-white);
+                box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.3);
+                width: min-max(400px, 35vw);
+                height: 40vh;    
+            }
+
+        #estude-section {
+            padding: 3rem 2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+            #estude-online {
+                width: 100%;
+            }
+            
+            #estude-online h4 {
+                color: var(--primary-red);
+                font-weight: 700;
+                font-size: 1.5rem;
+                line-height: 1.2;
+                padding-bottom: 2rem;
+                width: 100%;
+            }
+        
+                #estude-referencia {
+                    background-size: cover;
+                    width: 80vw;
+                    height: 80vh;
+                    padding: 2rem 2rem;
+                    border-radius: 8px 8px 32px 32px;
+                    transform: translateY(-4.5rem);
+                    display: flex;
+                    flex-flow: column nowrap;
+                    justify-content: end;
+                }
+            
+            
+                #estude-referencia h3 {
+                    font-size: 2rem;
+                    font-weight: 700;
+                    line-height: 1.2;
+                    color: var(--background-white);
+                    text-align: start;
+                }
+
+        #sobre-section {
+            background-color: var(--primary-red);
+            padding: 3rem 2rem 3rem 2rem;
+            color: var(--background-white);
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        
+        }
+
+        
+        #sobre-img-container {
+            width: 100%;
+            margin-bottom: 2rem;
+            display: flex;
+            justify-content: start;
+            align-items: center;
+        }
+        
+        #sobre-content {
+            width: 100%;
+        }
+        
+        #sobre-section img {
+            width: auto;
+            position: relative;
+            bottom: 0;
+        }
+        
+        
+        #sobre-section p {
+            padding: 2rem 0 3rem 0;
+            width: 100%;
+
+        }
+            
+
+        #cursos-section {
+            padding: 3rem 2rem;
+        }
+            
+            #cursos-section h3 {
+                padding-bottom: 2rem;
+                font-size: 2rem;      
+                text-align: center; 
+            }
+            
+            
+            .curso-item:hover {
+                transform: translateY(-5px) translateX(-5px);
+                border: var(--details) 1px solid;
+                box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.15);
+            }
+            
+            .curso-item h2 {
+                font-weight: 700;
+                font-size: 1.5rem;
+                line-height: 1;
+                padding-bottom: 1rem;
+            
+            }
+            
+            .curso-item h5 {
+                font-weight: 400;
+                font-size: 1rem;
+                margin-bottom: 2rem;
+            }
+
+            #faq-section {
+                padding: 3rem 2rem;
+            } 
+
+            #faq-section h3 {
+                font-size: 2rem;
+            }
+
+            footer {
+                justify-content: flex-start;
+                align-items: flex-start;
+                width: 100%;
+                gap: 3rem;
+            }
+
+            /* PÁGINA DE CURSO */
+
+            #modulos-curso-section {
+                padding: 3rem 2rem;
+            }
+
+            #especialista-container {
+                width: 100%;
+                color: var(--space-cadet);
+                padding: 3rem 0;
+            }
+
+            #bonus-section {
+                padding: 3rem 2rem;
+
+            }
+
+            #investimento-curso-section {
+                padding: 3rem 2rem;
+            }
+
+            #testimonial-section {
+                padding: 3rem 2rem;
+            }
+
+            
+
+         
+
 
 }
 
-@media screen and (max-width: 640px) {  
+@media screen and (max-width: 800px) {
+    
+    #nav-brand img {
+        position: relative;
+        transform: translateY(1rem);
+        width: 72px;
+        aspect-ratio: 1/1;
+    }
+
+    #logo-container {
+        gap: 1rem;
+        line-height: 1;
+        width: 60vw;
+    }
+
+    #banner-content h1 {
+        width: 100%;
+        font-size: 1.2rem;
+    }
+
+    #banner-content h2 {
+        width: 100%;
+        font-size: 0.8rem;
+
+    }
+
+    /* quebra de linha */
+    #diferencial-section .br-sm {  
+        display: inline;
+    }
+
+    .diferencial-item {
+        width: 100%;
+        height: 40vh;    
+    }
+
+    #sobre-section {
+        justify-content: center;
+        align-items: center;    
+    }
+
+    #sobre-img-container {
+        width: 70vw;
+        margin-bottom: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+
+    #contato-section, #contato-container {
+        padding: 3rem 2rem;
+
+    }
+
+    #contato-section img {
+        left: 2rem;
+        width: 60%;
+    }
+
+    #contato-container {
+        width: 80%;
+    }
+
+    .contato-btn {
+        width: 100%;
+        font-size: 0.8rem;
+    }
+
+
+    #footer-social{
+        align-items: start;
+    }
+
+    #footer-social-icons{
+        display: flex;
+        flex-flow: row;
+        align-items: center;
+    }
+
+    /* página do curso */
+
+    #curso-banner-section {
+        padding: 2rem 2rem 3rem 2rem;
+        background-color: var(--background-white);
+        height: auto;
+        display: flex;
+        flex-flow: column;
+        justify-content: start;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    #curso-banner-section iframe {
+        width: 100%;
+        aspect-ratio: 16/9;
+    }
+    
+    #curso-banner-content {
+        width: 100%;
+        display: flex;
+        flex-flow: column;
+        justify-content: space-between;
+        align-items: start;
+        text-align: start;
+    }
+    
+    #curso-banner-content h1{
+        font-size: 1.2rem;
+        color: var(--primary-red);
+        width: 80%;
+        padding-bottom: 0.5rem;
+    
+    }
+    
+    #curso-banner-content h2{
+        font-size: 0.8rem;
+        font-weight: 400;
+        width: 100%;
+        color: var(--space-cadet);
+        margin-bottom: 1rem;
+    
+    }
+
+    .banner-btn {
+        font-size: 0.8rem;
+    }
+
+    /* MODULOS DO CURSO */
+
+    #modulos-content {
+        align-items: center;
+    }
+
+    #modulos-curso-section h4 {
+        width: 80%;
+    }
+
+    #duracao-curso {
+        width: 100%;
+        font-size: 1rem;
+        text-align: center;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+    }
+
+    .br-lg {
+        display: none;
+    }
+
+    .accordionMenu .modulos {
+        width: 100%;
+    }
+
+    /* ESPECIALISTA */
+
+    #especialista-section {
+        gap: 2rem;
+        flex-flow: row wrap;
+
+    }
+
+    #especialista-container {
+        width: 100%;
+        color: var(--space-cadet);
+        padding: 0 0 3rem 0;
+    }
+ 
+    #investimento-box-beneficios {
+        width: 100%;
+    }
+    
+
+    #investimento-box-valor {
+        width: 100%;
+    }
+
+    .testimonials {
+        width: 80vw;
+    }
+
+
+    .control-slider {
+        visibility: hidden;
+    }
+
+    .slider-container {
+        overflow-x: scroll;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+       /* Hide scrollbar for IE, Edge and Firefox */
+          -ms-overflow-style: none;  /* IE and Edge */
+          scrollbar-width: none;  /* Firefox */
+      }
+  
+      .slider-container::-webkit-scrollbar {
+      /* Hide scrollbar for Chrome, Safari and Opera */
+          display: none;
+      }
+
+      .slider {
+        justify-content: space-between;
+        width: 100%;
+      }
+
+      .slide-box {
+        width: 90vw;
+        scroll-snap-align: center;
+
+
+      }
+
+
+
 
 }

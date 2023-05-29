@@ -1,7 +1,20 @@
 :root {
-    --primary: #6311e1;
-    --primary-dark: #330973;
-    --secondary: #D61DE0;
-    --secondary-dark: #9A15A1;
-    --details: #07E0B3;
+    /* CSS HEX */
+--primary-red: #831d45ff;
+--primary-dark-red: #430f24ff;
+--space-cadet: #2b2d42ff;
+--cool-gray: #DBE0E6;
+--details: #5dd9c1ff;
+--background-white: #edf2f4ff;
+
+
+/* CSS HSL 
+--murrey: hsla(336, 64%, 31%, 1);
+--tyrian-purple: hsla(336, 63%, 16%, 1);
+--space-cadet: hsla(235, 21%, 21%, 1);
+--cool-gray: hsla(218, 17%, 62%, 1);
+--turquoise: hsla(168, 62%, 61%, 1);
+--antiflash-white: hsla(197, 24%, 94%, 1);
+*/
+
 }
