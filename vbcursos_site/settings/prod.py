@@ -12,14 +12,12 @@ ALLOWED_HOSTS = ['vbcursos-deploy.onrender.com']
 DATABASE_URL = os.getenv("DATABASE_URL")
 
 DATABASES = {
-    'default': dj_database_url.parse('postgres://site_vbcursos_user:nKN8Ke9CbQMSQ4MjjtAfUamlr6XeMDiD@dpg-chptlsik728ivvpvdml0-a.ohio-postgres.render.com/site_vbcursos')
+    'default': dj_database_url.config(default=DATABASE_URL, conn_max_age=1800),
 }
 
-'''
 CLOUDINARY_STORAGE = {
     'CLOUDINARY_URL': os.getenv("CLOUDINARY_URL"),
 }
-'''
 
 CSRF_TRUSTED_ORIGINS = ['https://vbcursos-deploy.onrender.com']
 
