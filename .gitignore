@@ -1,0 +1,5 @@
+vbcursos_site/settings/local.py
+vbcursos_site/settings/dev.py
+.env
+
+db.sqlite3
