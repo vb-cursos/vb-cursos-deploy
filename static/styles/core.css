@@ -260,7 +260,7 @@ overflow-y: hidden;
         font-size: 2rem;
         font-weight: 700;
         text-align: right;
-        line-height: 1;
+        line-height: 1.2;
         margin: 0;
     }
 
@@ -444,6 +444,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#430f24",endCo
 #cursos-section > p {
     padding-bottom: 2rem;
     color: var(--space-cadet);
+    text-align: center;
 
 }
 
