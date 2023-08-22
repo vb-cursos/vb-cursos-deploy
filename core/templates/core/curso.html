@@ -33,7 +33,7 @@
                             </svg>                    
                         </div>
                         <div class="submenuItems modulos">
-                            <h3>{{ modulo.descricao }}</h3>
+                            <h3>{{ modulo.descricao|safe }}</h3>
                         </div>
                     </li>
                 {% endfor %}
