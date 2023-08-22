@@ -330,7 +330,7 @@ overflow-y: hidden;
     #modalidades-cursos {
         display: flex;
         flex-flow: row wrap;
-        margin: 2rem 0;
+        margin-bottom: 2rem;
         font-size: 1rem;
 
     }
@@ -350,7 +350,7 @@ overflow-y: hidden;
         padding: 1rem;
         border: var(--details) 1px solid;
         box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.15);
-        border-radius: 0px 32px 32px 32px;
+        border-radius: 0px 16px 16px 16px;
 
     }
 

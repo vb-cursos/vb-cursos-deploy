@@ -161,7 +161,7 @@
             #modalidades-cursos {
                 display: flex;
                 flex-flow: row wrap;
-                margin: 1rem 0;
+                margin: 0 0 1rem 0;
             }
 
             #modalidades-cursos h5, #modalidades-cursos p {
