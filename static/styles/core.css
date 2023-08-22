@@ -336,7 +336,7 @@ overflow-y: hidden;
     }
 
     #modalidades-cursos h5, #modalidades-cursos p {
-        font-size: 0.8rem;
+        font-size: 1rem;
         color: var(--space-cadet);
         text-align: center;
 
@@ -398,8 +398,8 @@ overflow-y: hidden;
     position: relative;
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-between;
-    align-items: start;
+    justify-content: space-around;
+    align-items: center;
     width: 100%;
     background: rgb(67,15,36);
 background: -moz-linear-gradient(0deg, rgba(67,15,36,1) 0%, rgba(131,29,69,1) 100%);
@@ -470,7 +470,8 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#430f24",endCo
 
 #cursos-section > p {
     padding-bottom: 2rem;
-    color: var(--space-cadet);
+    padding-top: 0.5rem;
+    color: var(--primary-red);
     text-align: center;
 
 }

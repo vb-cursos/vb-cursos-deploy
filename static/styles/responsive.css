@@ -162,13 +162,17 @@
                 display: flex;
                 flex-flow: row wrap;
                 margin: 1rem 0;
-        
+            }
+
+            #modalidades-cursos h5, #modalidades-cursos p {
+                font-size: 0.8rem;
             }
 
             .modalidadeWrapper{
                 width: 45%;
-        
             }
+
+            
         
                 #estude-referencia {
                     background-size: cover;
