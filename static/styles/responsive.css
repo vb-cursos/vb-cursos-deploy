@@ -157,6 +157,18 @@
                 padding-bottom: 2rem;
                 width: 100%;
             }
+
+            #modalidades-cursos {
+                display: flex;
+                flex-flow: row wrap;
+                margin: 1rem 0;
+        
+            }
+
+            .modalidadeWrapper{
+                width: 45%;
+        
+            }
         
                 #estude-referencia {
                     background-size: cover;
