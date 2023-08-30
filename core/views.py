@@ -21,7 +21,15 @@ def paginaCurso(request, slug):
     cursos = Curso.objects.all()
     faq = FaqGeral.objects.all()
     curso = get_object_or_404(Curso, slug=slug)
-    parcela = round(curso.price / 12, 2)
+    pricelive = curso.pricelive
+    pricerec = curso.pricerec
+    pricepres = curso.pricepres
+    priceb4live = float(pricelive) * 2.20
+    priceb4rec = float(pricerec) * 2.20
+    priceb4pres = float(pricepres) * 2.20
+    parcelalive = round(curso.pricelive / 10, 2)
+    parcelarec = round(curso.pricerec / 10, 2)
+    parcelapres = round(curso.pricepres / 10, 2)
     modulos = Modulo.objects.filter(curso=curso)
     video_url = curso.urlVideo
     feedbacks = Feedbacks.objects.all()
@@ -37,7 +45,12 @@ def paginaCurso(request, slug):
 
     context = {'cursos': cursos,
                'curso': curso,
-               'parcela': parcela,
+               'priceb4live':  f"{priceb4live:.2f}",
+               'priceb4rec': f"{priceb4rec:.2f}",
+               'priceb4pres': f"{priceb4pres:.2f}",
+               'parcelalive': parcelalive,
+               'parcelarec': parcelarec,
+               'parcelapres': parcelapres,
                'modulos': modulos,
                'faq': faq,
                'video_id': video_id,

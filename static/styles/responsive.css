@@ -32,6 +32,10 @@
         align-items: center;
     }
 
+    #sobre-content {
+        width: 40%;
+    }
+
     #sobre-section h4 {
         font-size: 1.5rem;
 }
@@ -57,12 +61,12 @@
         flex-flow: row nowrap;
         justify-content: space-between;
         align-items: center;
-        height: 10vh;
+        height: 8vh;
     }
 
     .navList {
         position: absolute;
-        top: 10vh;
+        top: 8vh;
         right: 0;
         width: 50%;
         height: 90vw;
@@ -212,7 +216,7 @@
             width: 100%;
             margin-bottom: 2rem;
             display: flex;
-            justify-content: start;
+            justify-content: center;
             align-items: center;
         }
         
@@ -301,6 +305,15 @@
                 padding: 3rem 2rem;
             }
 
+            #aulas-incompany {
+                flex-flow: column;
+            }
+
+            #aulas-incompany p, #aulas-incompany div, #aulas-incompany h5 {
+                width: 100%;
+                text-align: center;
+            }
+
             #testimonial-section {
                 padding: 3rem 2rem;
             }
@@ -313,6 +326,14 @@
 }
 
 @media screen and (max-width: 800px) {
+
+    nav {
+        height: 10vh;
+    }
+
+    .navList {
+        top: 10vh;
+    }
 
     section > h3 {
         font-size: 1.5rem !important;
@@ -336,6 +357,11 @@
         line-height: 1;
         width: 60vw;
     }
+
+    #logo-container p{
+        font-size: 0.8rem;
+    }
+
 
     #banner-content h1 {
         width: 100%;
@@ -410,7 +436,7 @@
         height: auto;
         display: flex;
         flex-flow: column;
-        justify-content: start;
+        justify-content: center;
         align-items: center;
         gap: 2rem;
     }
@@ -497,6 +523,10 @@
     
 
     #investimento-box-valor {
+        width: 100%;
+    }
+
+    #formas-pagamento {
         width: 100%;
     }
 

@@ -6,8 +6,8 @@
         <iframe src="https://www.youtube.com/embed/{{ video_id }}" frameborder="0" allowfullscreen></iframe>
 
         <div id="curso-banner-content">
-                <h1>{{ curso.h1 }}</h1>
-                <h2>{{ curso.h2 }}</h3>
+                <h1>{{ curso.h1|safe }}</h1>
+                <h2>{{ curso.h2|safe }}</h3>
                 <a class="banner-btn" href="#cursos-section">{{ curso.cta }}</a>
         </div>
 
@@ -18,7 +18,9 @@
          
             <div id="duracao-curso">
                 <h4>O QUE VOCÊ<br class="br-lg"> VAI APRENDER <br class="br-lg">NESTE CURSO</h4>
-                <p>Este {{ curso.title }} possui {{ curso.duracao }} horas, divididas em {{ curso.aulas }} aulas <b>cheias de conteúdo aprofundado e de alto valor sobre o assunto.</b></p>
+                <p>Este curso de {{ curso.title }} possui {{ curso.duracao }} horas, divididas em módulos <b>cheios de conteúdo aprofundado e de alto valor sobre o assunto.</b></p>
+                <br>
+                <p>{{ curso.diferencial }}</p>
             </div>
 
                 <ul class="accordionMenu modulos">
@@ -63,7 +65,7 @@
                 <img src="{% static 'images/pagamento-seguro.svg' %}">
                 <div>
                     <h5>Segurança no pagamento</h5>
-                    <h6>Disponibiliams um ambiente 100% seguro para pagamentos, seus dados estão protegidos.</h6>
+                    <h6>Disponibilizamos um ambiente 100% seguro para pagamentos, seus dados estão protegidos.</h6>
                 </div>
             </div>
             <div class="bonus-item">
@@ -77,7 +79,7 @@
                 <img src="{% static 'images/conversa.svg' %}">
                 <div>
                     <h5>Tira dúvidas online via Zoom e grupo no WhatsApp</h5>
-                    <h6>Você podera tirar suas dúvidas diretamente conosco no grupo de
+                    <h6>Você poderá tirar suas dúvidas diretamente conosco no grupo de
                         WhatsApp com alunos e na aula inaugural no Zoom.</h6>
                 </div>
             </div>
@@ -85,7 +87,7 @@
                 <img src="{% static 'images/garantia.svg' %}">
                 <div>
                     <h5>Garantia de satisfação<br> de 7 dias</h5>
-                    <h6>Voce podera cancelar sua inscrição e pedir a
+                    <h6>Voce poderá cancelar sua inscrição e pedir a
                         devolução de todo seu dinheiro por qualquer motivo.</h6>
                 </div>
             </div>
@@ -104,15 +106,52 @@
         <h4>VALOR DO SEU INVESTIMENTO</h4>
         <div id="investimento-curso-content">
             <div id="investimento-box-valor">
-                <p>De <span style="text-decoration: line-through;">R$1.297,00</span> por apenas R${{ curso.price }} à vista ou 12x de</p>
-                <p id="parcela">R${{ parcela }}</p>
+                <h5>Aulas 100% online ao vivo</h5>
+                <p>Para você interagir e tirar dúvidas na hora</p>
+                <br>
+                <p>De <span style="text-decoration: line-through;">R${{ priceb4live }}</span> por apenas R${{ curso.pricelive }} à vista ou 10x de</p>
+                <p id="parcela">R${{ parcelalive }}</p>
                 <a class="banner-btn" href="#cursos-section">Eu quero!</a>
             </div>
-            <div id="investimento-box-beneficios">
-                        
-                {{ curso.beneficios }}
+            <div id="investimento-box-valor">
+                <h5>Aulas gravadas</h5>
+                <p>Com acesso ilimitado para você assistir no seu próprio tempo.</p>
+                <br>
+                <p>De <span style="text-decoration: line-through;">R${{ priceb4rec }}</span> por apenas R${{ curso.pricerec }} à vista ou 10x de</p>
+                <p id="parcela">R${{ parcelarec }}</p>
+                <a class="banner-btn" href="#cursos-section">Eu quero!</a>
+            </div>
+            <div id="investimento-box-valor">
+                <h5>Aulas presenciais</h5>
+                <p>Para você desenvolver seu networking e imergir no conteúdo.</p>
+                <br>
+                <p>De <span style="text-decoration: line-through;">R${{ priceb4pres }}</span> por apenas R${{ curso.pricepres }} à vista ou 10x de</p>
+                <p id="parcela">R${{ parcelapres }}</p>
+                <a class="banner-btn" href="#cursos-section">Eu quero!</a>
+            </div>
+
+        </div>
+        <div id="apoio-conversao">
+            <div id="investimento-box-beneficios"> 
+                {{ curso.beneficios|safe }}
+            </div>
+            <div id="formas-pagamento">
+                <p>Formas de Pagamento</p>
+                <img src="{% static 'images/formas-de-pagamento.png' %}" />
             </div>
         </div>
+
+        <div id="aulas-incompany">
+            <div>
+                <h5>Aulas in-company</h5>
+                <p>Deixe seu time treinado<br>sem precisar sair da empresa.</p>
+            </div>
+            <br>
+            <p>Para realizar nosso curso dentro da sua empresa,<br>entre em contato para solicitar um orçamento personalizado.</p>
+            <br>
+            <a class="banner-btn" href="#cursos-section">Solicitar orçamento!</a>
+        </div>
+
     </section>
 
     <section id="testimonial-section">

@@ -283,7 +283,7 @@ overflow-y: hidden;
         padding: 2rem;
         background-color: var(--background-white);
         box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.3);
-        width: 350px;
+        width: max(27vw, 350px);
         height: fit-content;    
         min-height: 20rem;
         z-index: 100;
@@ -422,6 +422,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#430f24",endCo
     display: flex;
     justify-content: center;
     align-items: center;
+
 }
 
 
@@ -434,6 +435,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#430f24",endCo
 #sobre-content {
     width: 50vw;
     position: static;
+    margin-left: 3rem;
 }
 
 #sobre-content hr {
@@ -776,7 +778,7 @@ footer {
 }
 
 #curso-banner-content {
-    width: 50vw;
+    width: 30vw;
     display: flex;
     flex-flow: column;
     justify-content: space-between;
@@ -870,6 +872,8 @@ footer {
     padding: 4rem;
     background-color: var(--space-cadet);
     color: var(--background-white);
+    display: flex;
+    flex-flow: column nowrap;
 }
 
 #investimento-curso-section h4{
@@ -883,8 +887,9 @@ footer {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-    align-items: flex-start;
-    gap: 2rem;
+    gap: 1rem;
+    align-items: stretch;
+
 }
 
 #investimento-box-beneficios {
@@ -892,7 +897,7 @@ footer {
 }
 
 #investimento-box-valor {
-    width: 30vw;
+    width: max(20vw, 300px);
     padding: 2rem;
     border-radius: 2rem;
     border: 3px solid var(--details);
@@ -900,15 +905,75 @@ footer {
     color: var(--space-cadet);
     display: flex;
     flex-flow: column nowrap;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     text-align: center;
+    flex: 1;
 }
+
+#aulas-incompany {
+    width: 100%;
+    padding: 2rem;
+    border-radius: 2rem;
+    border: 3px solid var(--details);
+    background-color: var(--background-white);
+    color: var(--space-cadet);
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+    text-align: start;
+}
+
+#aulas-incompany h5 {
+    font-size: 1.5rem;
+}
+
+#aulas-incompany > div {
+    text-align: end;
+}
+
+#aulas-incompany > p {
+    width: 30%;    
+}
+
+#investimento-box-valor h5 {
+    font-size: 1.5rem;
+    line-height: 1;
+}
+
 
 #parcela {
     font-size: 3rem;
     font-weight: 700;
 
+}
+
+#apoio-conversao {
+    display: flex;
+    flex-flow: row wrap;
+    padding: 2rem 0 2rem 0;
+    justify-content: space-between;
+    gap: 2rem;
+
+}
+
+#formas-pagamento {
+    width: 40%;
+    border-radius: 0px 32px 32px 32px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--background-white);
+    font-weight: 700;
+    padding: 1rem;
+    gap: 0.5rem;
+    border: 2px solid var(--details);
+}
+
+#formas-pagamento img {
+    max-width: 100%;
 }
 
 /* ESPECIALISTA */
