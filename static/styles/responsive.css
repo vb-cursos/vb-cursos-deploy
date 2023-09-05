@@ -1,18 +1,18 @@
 @media screen and (max-width: 1200px) {
 
-    #diferencial-section {
+    .diferencial-section {
         display: block;
     }
 
 
-    #diferencial-section h3 {
+    .diferencial-section h3 {
         font-size: 2rem;
         text-align: center;
         padding-bottom: 2rem;
     }
 
     /* quebra de linha */
-    #diferencial-section .br-lg {
+    .diferencial-section .br-lg {
         display: none;
     }
 
@@ -36,7 +36,7 @@
         width: 40%;
     }
 
-    #sobre-section h4 {
+    .sobreSection h4 {
         font-size: 1.5rem;
 }
 
@@ -114,17 +114,17 @@
 
         }
 
-        #diferencial-section {
+        .diferencial-section {
             padding: 3rem 2rem;
         }
         
-            #diferencial-section h3 {
+            .diferencial-section h3 {
                 font-size: 2rem;
                 text-align: center;
             }
 
             /* quebra de linha */
-            #diferencial-section .br-lg {
+            .diferencial-section .br-lg {
                 display: none;
             }
 
@@ -199,7 +199,7 @@
                     text-align: start;
                 }
 
-        #sobre-section {
+        .sobreSection {
             background-color: var(--primary-red);
             padding: 3rem 2rem 3rem 2rem;
             color: var(--background-white);
@@ -224,14 +224,14 @@
             width: 100%;
         }
         
-        #sobre-section img {
+        .sobreSection img {
             width: auto;
             position: relative;
             bottom: 0;
         }
         
         
-        #sobre-section p {
+        .sobreSection p {
             padding: 2rem 0 3rem 0;
             width: 100%;
 
@@ -286,7 +286,7 @@
 
             /* PÁGINA DE CURSO */
 
-            #modulos-curso-section {
+            .modulos-curso-section {
                 padding: 3rem 2rem;
             }
 
@@ -375,7 +375,7 @@
     }
 
     /* quebra de linha */
-    #diferencial-section .br-sm {  
+    .diferencial-section .br-sm {  
         display: inline;
     }
 
@@ -384,7 +384,7 @@
         height: 40vh;    
     }
 
-    #sobre-section {
+    .sobreSection {
         justify-content: center;
         align-items: center;    
     }
@@ -482,7 +482,7 @@
         align-items: center;
     }
 
-    #modulos-curso-section h4 {
+    .modulos-curso-section h4 {
         width: 80%;
     }
 
@@ -505,7 +505,7 @@
 
     /* ESPECIALISTA */
 
-    #especialista-section {
+    .especialistaSection {
         gap: 2rem;
         flex-flow: row wrap;
 

@@ -1,18 +1,18 @@
 @media screen and (max-width: 1200px) {
 
-    #diferencial-section {
+    .diferencial-section {
         display: block;
     }
 
 
-    #diferencial-section h3 {
+    .diferencial-section h3 {
         font-size: 2rem;
         text-align: center;
         padding-bottom: 2rem;
     }
 
     /* quebra de linha */
-    #diferencial-section .br-lg {
+    .diferencial-section .br-lg {
         display: none;
     }
 
@@ -32,7 +32,11 @@
         align-items: center;
     }
 
-    #sobre-section h4 {
+    #sobre-content {
+        width: 40%;
+    }
+
+    .sobreSection h4 {
         font-size: 1.5rem;
 }
 
@@ -57,12 +61,12 @@
         flex-flow: row nowrap;
         justify-content: space-between;
         align-items: center;
-        height: 10vh;
+        height: 8vh;
     }
 
     .navList {
         position: absolute;
-        top: 10vh;
+        top: 8vh;
         right: 0;
         width: 50%;
         height: 90vw;
@@ -110,17 +114,17 @@
 
         }
 
-        #diferencial-section {
+        .diferencial-section {
             padding: 3rem 2rem;
         }
         
-            #diferencial-section h3 {
+            .diferencial-section h3 {
                 font-size: 2rem;
                 text-align: center;
             }
 
             /* quebra de linha */
-            #diferencial-section .br-lg {
+            .diferencial-section .br-lg {
                 display: none;
             }
 
@@ -157,6 +161,22 @@
                 padding-bottom: 2rem;
                 width: 100%;
             }
+
+            #modalidades-cursos {
+                display: flex;
+                flex-flow: row wrap;
+                margin: 0 0 1rem 0;
+            }
+
+            #modalidades-cursos h5, #modalidades-cursos p {
+                font-size: 0.8rem;
+            }
+
+            .modalidadeWrapper{
+                width: 45%;
+            }
+
+            
         
                 #estude-referencia {
                     background-size: cover;
@@ -179,7 +199,7 @@
                     text-align: start;
                 }
 
-        #sobre-section {
+        .sobreSection {
             background-color: var(--primary-red);
             padding: 3rem 2rem 3rem 2rem;
             color: var(--background-white);
@@ -196,7 +216,7 @@
             width: 100%;
             margin-bottom: 2rem;
             display: flex;
-            justify-content: start;
+            justify-content: center;
             align-items: center;
         }
         
@@ -204,14 +224,14 @@
             width: 100%;
         }
         
-        #sobre-section img {
+        .sobreSection img {
             width: auto;
             position: relative;
             bottom: 0;
         }
         
         
-        #sobre-section p {
+        .sobreSection p {
             padding: 2rem 0 3rem 0;
             width: 100%;
 
@@ -266,7 +286,7 @@
 
             /* PÁGINA DE CURSO */
 
-            #modulos-curso-section {
+            .modulos-curso-section {
                 padding: 3rem 2rem;
             }
 
@@ -285,6 +305,15 @@
                 padding: 3rem 2rem;
             }
 
+            #aulas-incompany {
+                flex-flow: column;
+            }
+
+            #aulas-incompany p, #aulas-incompany div, #aulas-incompany h5 {
+                width: 100%;
+                text-align: center;
+            }
+
             #testimonial-section {
                 padding: 3rem 2rem;
             }
@@ -297,6 +326,14 @@
 }
 
 @media screen and (max-width: 800px) {
+
+    nav {
+        height: 10vh;
+    }
+
+    .navList {
+        top: 10vh;
+    }
 
     section > h3 {
         font-size: 1.5rem !important;
@@ -321,6 +358,11 @@
         width: 60vw;
     }
 
+    #logo-container p{
+        font-size: 0.8rem;
+    }
+
+
     #banner-content h1 {
         width: 100%;
         font-size: 1.2rem;
@@ -333,7 +375,7 @@
     }
 
     /* quebra de linha */
-    #diferencial-section .br-sm {  
+    .diferencial-section .br-sm {  
         display: inline;
     }
 
@@ -342,7 +384,7 @@
         height: 40vh;    
     }
 
-    #sobre-section {
+    .sobreSection {
         justify-content: center;
         align-items: center;    
     }
@@ -394,7 +436,7 @@
         height: auto;
         display: flex;
         flex-flow: column;
-        justify-content: start;
+        justify-content: center;
         align-items: center;
         gap: 2rem;
     }
@@ -440,7 +482,7 @@
         align-items: center;
     }
 
-    #modulos-curso-section h4 {
+    .modulos-curso-section h4 {
         width: 80%;
     }
 
@@ -463,7 +505,7 @@
 
     /* ESPECIALISTA */
 
-    #especialista-section {
+    .especialistaSection {
         gap: 2rem;
         flex-flow: row wrap;
 
@@ -481,6 +523,10 @@
     
 
     #investimento-box-valor {
+        width: 100%;
+    }
+
+    #formas-pagamento {
         width: 100%;
     }
 

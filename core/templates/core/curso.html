@@ -8,12 +8,12 @@
         <div id="curso-banner-content">
                 <h1>{{ curso.h1|safe }}</h1>
                 <h2>{{ curso.h2|safe }}</h3>
-                <a class="banner-btn" href="#cursos-section">{{ curso.cta }}</a>
+                <a class="banner-btn" href="#investimento-curso-section">{{ curso.cta }}</a>
         </div>
 
     </section>
 
-    <section id="modulos-curso-section">
+    <section id="metodo-section" class="modulos-curso-section">
         <div id="modulos-content">
          
             <div id="duracao-curso">
@@ -43,7 +43,7 @@
         </div>
     </section>
 
-    <section id="especialista-section">
+    <section id="especialista" class="especialistaSection">
         <img src="{% static 'images/ana-especialista.jpg' %}">
         <div id="especialista-container">
             <h3>COM QUEM VOCÊ VAI APRENDER</h3>
@@ -106,12 +106,12 @@
         <h4>VALOR DO SEU INVESTIMENTO</h4>
         <div id="investimento-curso-content">
             <div id="investimento-box-valor">
-                <h5>Aulas 100% online ao vivo</h5>
+                <h5>Aulas 100% online <br>ao vivo</h5>
                 <p>Para você interagir e tirar dúvidas na hora</p>
                 <br>
                 <p>De <span style="text-decoration: line-through;">R${{ priceb4live }}</span> por apenas R${{ curso.pricelive }} à vista ou 10x de</p>
                 <p id="parcela">R${{ parcelalive }}</p>
-                <a class="banner-btn" href="#cursos-section">Eu quero!</a>
+                <a class="banner-btn" target="_blank" href={{ wpplink_live }}>Eu quero!</a>
             </div>
             <div id="investimento-box-valor">
                 <h5>Aulas gravadas</h5>
@@ -119,7 +119,7 @@
                 <br>
                 <p>De <span style="text-decoration: line-through;">R${{ priceb4rec }}</span> por apenas R${{ curso.pricerec }} à vista ou 10x de</p>
                 <p id="parcela">R${{ parcelarec }}</p>
-                <a class="banner-btn" href="#cursos-section">Eu quero!</a>
+                <a class="banner-btn" target="_blank" href={{ wpplink_rec }}>Eu quero!</a>
             </div>
             <div id="investimento-box-valor">
                 <h5>Aulas presenciais</h5>
@@ -127,7 +127,7 @@
                 <br>
                 <p>De <span style="text-decoration: line-through;">R${{ priceb4pres }}</span> por apenas R${{ curso.pricepres }} à vista ou 10x de</p>
                 <p id="parcela">R${{ parcelapres }}</p>
-                <a class="banner-btn" href="#cursos-section">Eu quero!</a>
+                <a class="banner-btn" target="_blank" href={{ wpplink_pres }}>Eu quero!</a>
             </div>
 
         </div>
@@ -143,19 +143,19 @@
 
         <div id="aulas-incompany">
             <div>
-                <h5>Aulas in-company</h5>
+                <h5>Aulas in company</h5>
                 <p>Deixe seu time treinado<br>sem precisar sair da empresa.</p>
             </div>
             <br>
             <p>Para realizar nosso curso dentro da sua empresa,<br>entre em contato para solicitar um orçamento personalizado.</p>
             <br>
-            <a class="banner-btn" href="#cursos-section">Solicitar orçamento!</a>
+            <a class="banner-btn" target="_blank" href={{ wpplink_incompany }}>Solicitar orçamento!</a>
         </div>
 
     </section>
 
     <section id="testimonial-section">
-        <h3>DEPOIMENTOS DE<br> NOSSOS ALUNOS</h3>
+        <h3>DEPOIMENTOS DE NOSSOS ALUNOS</h3>
         <div id="testimonial-container">
             <a href="#!" class="control-slider btn-left">
                 <svg width="25px" class="chevron testimonialLeft" id="Camada_2" data-name="Camada 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 232.1 139.36">
@@ -175,7 +175,7 @@
                                 
                                 </p>
                                 <div>
-                                    <img src="{{ feedback.foto.url }}" />
+                                   {# <img src="{{ feedback.foto.url }}" /> #}
                                     <h3 class="name">{{ feedback.nome }}</h3>
                                     <h4 class="job">{{ feedback.profissao }}</h4>
                                 </div>

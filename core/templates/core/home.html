@@ -12,7 +12,7 @@
 </section>
 
 
-<section id="diferencial-section">
+<section id="metodo-section" class="diferencial-section">
     <img src="{% static 'images/vb-logo-line.svg' %}" alt="VB Cursos contorno" id="outline-logo">
     <h3>POR QUE <br class="br-lg">ESCOLHER <br class="br-lg"><br class="br-sm">NOSSOS <br class="br-lg">CURSOS?</h3>
     <div id="diferencial-container">
@@ -71,7 +71,7 @@
                 <p>Para você desenvolver seu networking e imergir no conteúdo</p>
             </div>
             <div class="modalidadeWrapper">
-                <h5>Aulas in-company</h5>
+                <h5>Aulas in company</h5>
                 <p>Deixe seu time treinado sem precisar sair da empresa</p>
             </div>
         </div>
@@ -107,7 +107,7 @@
                             
                             </p>
                             <div>
-                                <img src="{{ feedback.foto.url }}" />
+                                {#  <img src="{{ feedback.foto.url }}" />  #}
                                 <h3 class="name">{{ feedback.nome }}</h3>
                                 <h4 class="job">{{ feedback.profissao }}</h4>
                             </div>
@@ -128,7 +128,7 @@
 </section>
 
 
-<section id="sobre-section">
+<section id="especialista" class="sobreSection">
 
         <div id="sobre-img-container">
             <img src="{% static 'images/especialista.png' %}">

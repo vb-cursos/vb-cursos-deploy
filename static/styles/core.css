@@ -226,7 +226,7 @@ nav {
 
 /* Diferencial */
 
-#diferencial-section {
+.diferencial-section {
     position: relative;
     border-radius: 4rem 4rem 0 0;
     padding: 4rem 4rem;
@@ -255,7 +255,7 @@ overflow-y: hidden;
         z-index: 1;
     }
 
-    #diferencial-section h3 {
+    .diferencial-section h3 {
         color: var(--background-white);
         font-size: 2rem;
         font-weight: 700;
@@ -264,7 +264,7 @@ overflow-y: hidden;
         margin: 0;
     }
 
-    #diferencial-section .br-sm {
+    .diferencial-section .br-sm {
         display: none;
     }
 
@@ -392,7 +392,7 @@ overflow-y: hidden;
     }
 
 
-#sobre-section {
+.sobreSection {
     padding: 4rem 4rem;
     color: var(--background-white);
     position: relative;
@@ -410,7 +410,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#430f24",endCo
 }
 
 
-#sobre-section h4 {
+.sobreSection h4 {
         font-size: 2rem;
         font-weight: 700;
         line-height: 1;
@@ -426,7 +426,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#430f24",endCo
 }
 
 
-#sobre-section img {
+.sobreSection img {
     max-height: 50vh;
     position: relative;
     bottom: 0;
@@ -762,9 +762,8 @@ footer {
 /* HERO SECTION */
 
 #curso-banner-section {
-    padding: 4rem;
+    padding: 8rem;
     background-color: var(--background-white);
-    min-height: 80vh;
     display: flex;
     flex-flow: row;
     justify-content: center;
@@ -805,7 +804,7 @@ footer {
 /* MODULOS */
 
 
-#modulos-curso-section {
+.modulos-curso-section {
     padding: 4rem;
     background: rgb(67,15,36);
     background: -moz-linear-gradient(0deg, rgba(67,15,36,1) 0%, rgba(131,29,69,1) 100%);
@@ -824,7 +823,7 @@ footer {
 
 }
 
-#modulos-curso-section h4 {
+.modulos-curso-section h4 {
     font-weight: 700;
     font-size: 2rem;
     color: var(--background-white);
@@ -832,7 +831,7 @@ footer {
     line-height: 1;
 }
 
-#modulos-curso-section h2 {
+.modulos-curso-section h2 {
     font-weight: 600;
     font-size: 0.8rem;
     width: 90%;
@@ -844,7 +843,7 @@ footer {
     text-align: end;
 }
 
-#modulos-curso-section h3 {
+.modulos-curso-section h3 {
     font-weight: 400;
     font-size: 0.8rem;
 }
@@ -978,7 +977,7 @@ footer {
 
 /* ESPECIALISTA */
 
-#especialista-section {
+.especialistaSection {
     background-color: var(--background-white);
     height: auto;
     display: flex;
@@ -990,7 +989,7 @@ footer {
 }
 
 
-#especialista-section img {
+.especialistaSection img {
     height: 60vh;
     border-radius: 8px 8px 32px 32px;
     transform: translateY(-0.5rem);

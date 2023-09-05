@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib import messages
+import urllib.parse
 from .models import Curso, Modulo, FaqGeral, Feedbacks
 
 
@@ -43,6 +44,31 @@ def paginaCurso(request, slug):
     if "&" in video_id:
         video_id = video_id.split("&")[0]
 
+    
+    numerowpp = "5541991675561"
+
+    mensagemlive = f"Olá, gostaria de investir no { curso.title } ao vivo!"
+    msglive_codificada = urllib.parse.quote(mensagemlive)
+    
+    wpplink_live = f"https://wa.me/{numerowpp}?text={msglive_codificada}"
+
+    mensagemrec = f"Olá, gostaria de investir no { curso.title } gravado!"
+    msgrec_codificada = urllib.parse.quote(mensagemrec)
+    
+    wpplink_rec = f"https://wa.me/{numerowpp}?text={msgrec_codificada}"
+
+    mensagempres = f"Olá, gostaria de investir no { curso.title } presencial!"
+    msgpres_codificada = urllib.parse.quote(mensagempres)
+
+    wpplink_pres = f"https://wa.me/{numerowpp}?text={msgpres_codificada}"
+
+    msgincompany = f"Olá, gostaria de investir no { curso.title } in company!"
+    msgincompany_codificada = urllib.parse.quote(msgincompany)
+
+    wpplink_incompany = f"https://wa.me/{numerowpp}?text={msgincompany_codificada}"
+
+
+
     context = {'cursos': cursos,
                'curso': curso,
                'priceb4live':  f"{priceb4live:.2f}",
@@ -52,10 +78,14 @@ def paginaCurso(request, slug):
                'parcelarec': parcelarec,
                'parcelapres': parcelapres,
                'modulos': modulos,
-               'faq': faq,
-               'video_id': video_id,
-               'feedbacks': feedbacks,
-               'qntd_feedbacks': qntd_feedbacks
+                'faq': faq,
+                'video_id': video_id,
+                'feedbacks': feedbacks,
+                'qntd_feedbacks': qntd_feedbacks,
+                'wpplink_live': wpplink_live,
+                'wpplink_rec': wpplink_rec,
+                'wpplink_pres': wpplink_pres,
+                'wpplink_incompany': wpplink_incompany,
                }
 
     return render(request, 'core/curso.html', context)
